@@ -21,9 +21,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/style/variables.scss";
+
 header {
   .header-inner {
-    width: 1200px;
+    width: $inner-container-width;
     margin: 0 auto;
     height: 100px;
     display: flex;
