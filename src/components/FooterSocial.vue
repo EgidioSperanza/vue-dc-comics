@@ -39,6 +39,8 @@ export default {
 
     .footer-signin{
         width: 60%;
+        display: flex;
+        align-items: center;
         a{
             padding: 10px;
             border: 3px solid $primary-link-color;
