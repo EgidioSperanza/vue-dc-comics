@@ -34,8 +34,9 @@ header {
   }
   .jumbotron{
       height: 500px;
-      background: url('../assets/jumbotron.jpg');
+      background: url('../assets/jumbotron.jpg') no-repeat;
       background-position: top center;
+      background-size:cover ;
   }
 }
 </style>
