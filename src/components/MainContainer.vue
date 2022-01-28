@@ -53,6 +53,7 @@ main {
       display: flex;
       flex-direction: column;
       text-align: left;
+      cursor: pointer;
 
       .comic-cover {
         width: 100%;

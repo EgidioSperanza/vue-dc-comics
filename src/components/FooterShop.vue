@@ -45,7 +45,6 @@ export default {
 
 .footer-shop {
   background-color: $primary-link-color;
-  padding: 50px 0;
   display: flex;
   justify-content: space-between;
   ul {
@@ -55,10 +54,32 @@ export default {
     justify-content: space-between;
 
     li {
+      height: 150px;
       cursor: pointer;
       display: flex;
       align-items: center;
 
+      &:hover {
+        position: relative;
+      }
+      &:hover:before{
+        content: "";
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            top: 0;
+            height: 4px;
+            background-color: #fff;
+      }
+      &:hover:after{
+        content: "";
+            position: absolute;
+            left: 10%;
+            right: 10%;
+            bottom: 0;
+            height: 4px;
+            background-color: #fff;
+      }
       img {
         height: 60px;
       }
