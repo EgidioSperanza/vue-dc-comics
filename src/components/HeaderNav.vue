@@ -1,23 +1,25 @@
 <template>
   <nav>
     <ul>
-      <li>characters</li>
-      <li class="active">comics</li>
-      <!-- TODO:active class assigned to the click -->
-      <li>movies</li>
-      <li>tv</li>
-      <li>games</li>
-      <li>collectibles</li>
-      <li>videos</li>
-      <li>fans</li>
-      <li>news</li>
-      <li>shop</li>
+      <li
+        v-for="link in navLinks"
+        :key="link.id"
+        @mouseover="link.isActive = true"
+        @mouseleave="link.isActive = false"
+        :class="link.isActive ? 'active' : ''"
+      >
+        {{ link.nameLink }}
+      </li>
     </ul>
   </nav>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    navLinks: Array,
+  },
+};
 </script>
 
 <style lang="scss" scoped>

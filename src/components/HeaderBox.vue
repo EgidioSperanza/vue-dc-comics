@@ -1,22 +1,25 @@
 <template>
   <header>
     <div class="header-inner">
-        <header-logo />
-        <header-nav />
+      <header-logo />
+      <header-nav :navLinks="navLinks"/>
     </div>
     <div class="jumbotron"></div>
   </header>
 </template>
 
 <script>
-import HeaderLogo from '@/components/HeaderLogo.vue'
-import HeaderNav from '@/components/HeaderNav.vue';
+import HeaderLogo from "@/components/HeaderLogo.vue";
+import HeaderNav from "@/components/HeaderNav.vue";
 
 export default {
-  components: { 
-      HeaderLogo,
-      HeaderNav
-   },
+  components: {
+    HeaderLogo,
+    HeaderNav,
+  },
+  props: {
+    navLinks: Array,
+  },
 };
 </script>
 
@@ -30,13 +33,12 @@ header {
     height: 100px;
     display: flex;
     align-items: center;
-
   }
-  .jumbotron{
-      height: 500px;
-      background: url('../assets/jumbotron.jpg') no-repeat;
-      background-position: top center;
-      background-size:cover ;
+  .jumbotron {
+    height: 500px;
+    background: url("../assets/jumbotron.jpg") no-repeat;
+    background-position: top center;
+    background-size: cover;
   }
 }
 </style>
