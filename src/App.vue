@@ -24,52 +24,42 @@ export default {
         {
           id: "lnk001",
           nameLink: "characters",
-          isActive: false,
         },
         {
           id: "lnk002",
           nameLink: "comics",
-          isActive: false,
         },
         {
           id: "lnk003",
           nameLink: "movies",
-          isActive: false,
         },
         {
           id: "lnk004",
           nameLink: "tv",
-          isActive: false,
         },
         {
           id: "lnk005",
           nameLink: "games",
-          isActive: false,
         },
         {
           id: "lnk006",
           nameLink: "collectibles",
-          isActive: false,
         },
         {
           id: "lnk007",
           nameLink: "videos",
-          isActive: false,
         },
         {
           id: "lnk008",
           nameLink: "fans",
-          isActive: false,
         },
         {
           id: "lnk009",
           nameLink: "news",
-          isActive: false,
         },
         {
           id: "lnk010",
           nameLink: "shop",
-          isActive: false,
         },
       ],
       comics: [

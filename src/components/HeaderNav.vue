@@ -1,13 +1,7 @@
 <template>
   <nav>
     <ul>
-      <li
-        v-for="link in navLinks"
-        :key="link.id"
-        @mouseover="link.isActive = true"
-        @mouseleave="link.isActive = false"
-        :class="link.isActive ? 'active' : ''"
-      >
+      <li v-for="link in navLinks" :key="link.id">
         {{ link.nameLink }}
       </li>
     </ul>
@@ -38,7 +32,17 @@ nav {
       display: flex;
       align-items: center;
       &:hover {
+        position: relative;
         color: $primary-link-color;
+        &::before {
+          content: "";
+          position: absolute;
+          left: 10%;
+          right: 10%;
+          bottom: 0px;
+          height: 6px;
+          background-color: $primary-link-color;
+        }
       }
       &.active {
         position: relative;
