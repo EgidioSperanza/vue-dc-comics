@@ -1,7 +1,7 @@
 <template>
   <nav>
     <ul>
-      <li v-for="link in navLinks" :key="link.id">
+      <li v-for="(link, index) in navLinks" :key="link.id" @click="isActive=index" :class="isActive===index ? 'active' : ''">
         {{ link.nameLink }}
       </li>
     </ul>
@@ -10,6 +10,11 @@
 
 <script>
 export default {
+  data(){
+    return {
+      isActive:"",
+    }
+  },
   props: {
     navLinks: Array,
   },
