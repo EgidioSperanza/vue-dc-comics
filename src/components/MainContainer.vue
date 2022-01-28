@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="main-inner">
-      <div class="current-series">Current Series</div>
+      <div class="current-series"><h3>Current Series</h3></div>
       <div v-for="(comic, index) in comics" :key="index" class="comic-card">
         <div class="comic-cover">
           <img :src="comic.thumb" :alt="`Cover by ${comic.series}`" />
@@ -33,7 +33,7 @@ main {
   .main-inner {
     width: $inner-container-width;
     margin: 0 auto;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -52,6 +52,7 @@ main {
       margin-top: 20px;
       display: flex;
       flex-direction: column;
+      text-align: left;
 
       .comic-cover {
         width: 100%;
@@ -73,6 +74,9 @@ main {
     margin: 0 auto;
     padding: 10px 40px;
     background-color: $primary-link-color;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 900;
   }
 }
 </style>
